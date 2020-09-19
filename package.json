@@ -1,0 +1,34 @@
+{
+    "name": "vk-msg-stats",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "parse": "node src/parse.js",
+        "find-message": "node src/metrics/find-message.js",
+        "top-your-messages": "node src/metrics/top-your-messages.js",
+        "weekly-words": "node src/metrics/weekly-words.js",
+        "word-frequency": "node src/metrics/word-frequency.js",
+        "vocab-compare": "node src/metrics/vocab-compare.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/kiraind/vk-msg-stats.git"
+    },
+    "keywords": [
+        "vk",
+        "analytics"
+    ],
+    "author": "kiraind",
+    "license": "MIT",
+    "dependencies": {
+        "iconv-lite": "^0.5.1",
+        "node-html-parser": "^1.2.14",
+        "unescape": "^1.0.1"
+    },
+    "bugs": {
+        "url": "https://github.com/kiraind/vk-msg-stats/issues"
+    },
+    "homepage": "https://github.com/kiraind/vk-msg-stats#readme"
+}
