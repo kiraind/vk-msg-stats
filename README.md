@@ -1,8 +1,8 @@
-# vk-msg-stats
+# Анализатор лички ВКонтакте
 
 ## Как юзать
 
-Выгрузить архив с данными из ВК, распаковать в папку `/path/to/Archive` так, чтобы существовал файл `/path/to/Archive/index.html`.
+Выгрузить [архив с данными из ВК](https://vk.com/data_protection?section=rules#archive), распаковать в папку `/path/to/Archive` так, чтобы существовал файл `/path/to/Archive/index.html`.
 
 Склонировать репозиторий и установить зависимости:
 
@@ -33,11 +33,14 @@ npm run weekly-words "Someone Else"
 # статистика частотности слов
 # от всех отправителей:
 npm run word-frequency
-# от конкретного отправителя
+# от конкретного отправителя (включая общие беседы)
 npm run word-frequency "Someone Else"
 # в своих сообщениях
 npm run word-frequency "Вы"
 
 # сравнение словарных запасов в диалоге
 npm run vocab-compare "Someone Else"
+
+# анализ количества сообщений по часам суток
+npm run time-analyze "Someone Else"
 ```
