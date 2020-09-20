@@ -1,7 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 const iconv = require('iconv-lite')
-const unescape = require('unescape')
+const he = require('he')
 
 const {
     parse,
@@ -27,7 +27,7 @@ function getDialogues() {
 
     const dialogues = linkElements.map(
         linkElement => ({
-            title: linkElement.text,
+            title: he.decode(linkElement.text),
             id: linkElement.getAttribute('href').split('/')[0]
         })
     )
