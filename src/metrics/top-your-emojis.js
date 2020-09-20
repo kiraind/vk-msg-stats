@@ -17,12 +17,14 @@ dialogues.forEach(({ id }) => {
 
     messages.forEach(({ who, text }) => {
         if(who === whoQuery && text !== '') {
-            
             const emojis = extractEmoji(text)
 
             emojis.forEach( emoji => {
-                if(stats[emoji]) stats[emoji]++
-                else stats[emoji] = 1
+                if(emoji in stats) {
+                    stats[emoji] += 1
+                } else {
+                    stats[emoji] = 1
+                }
             })
         }
     })
@@ -32,6 +34,6 @@ const rating = arrayifyRating(stats)
 const top50 = rating.slice(0, 50)
 
 console.log(
-    "Топ использованных вами эмоджи:\n",
+    'Топ использованных вами эмоджи:\n' +
     top50.map(({ str, count }, i) => `${i+1}. «${str}», ${count}`).join('\n')
 )
