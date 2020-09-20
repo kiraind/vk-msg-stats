@@ -4,7 +4,7 @@ function extractWords(message) {
         return []
     }
 
-    return message.match(/([А-Я,а-я,Ё,ё])+/g) ?? [];
+    return message.match(/([а-яё])+/gi) ?? [];
 }
 
 module.exports = extractWords
