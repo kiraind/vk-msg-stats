@@ -12,6 +12,7 @@
         "weekly-words": "node src/metrics/weekly-words.js",
         "word-frequency": "node src/metrics/word-frequency.js",
         "vocab-compare": "node src/metrics/vocab-compare.js",
+        "emoji-compare": "node src/metrics/emoji-compare.js",
         "time-analyze": "node src/metrics/time-analyze.js"
     },
     "repository": {

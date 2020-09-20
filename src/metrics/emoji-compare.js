@@ -1,13 +1,12 @@
 
 const arrayifyRating = require('./../utils/arrayifyRating.js')
-const extractWords = require('../utils/extractWords.js')
+const extractEmoji = require('../utils/extractEmoji.js')
 const compareEntities = require('../utils/compareEntities.js')
-
 
 // settings
 const topSize = 20
 const popTopSize = 500
-const countWordLength = true
+const countWordLength = false
 
 const {
     wordsStat,
@@ -15,22 +14,16 @@ const {
     elsesWordsStat, 
     myWordCount, 
     elsesWordCount,
-    myWordsLengths, 
-    elsesWordsLengths
-} = compareEntities(process.argv[2], extractWords, countWordLength)
+} = compareEntities(process.argv[2], extractEmoji, countWordLength)
 
 // report
 console.log(`
-Всего слов: ${myWordCount + elsesWordCount}
+Всего эмоджи: ${myWordCount + elsesWordCount}
     из них
     ваших:            ${myWordCount}
     собеседника(-ов): ${elsesWordCount}
 
-Средняя длина слова:    ${(myWordsLengths + elsesWordsLengths) / (myWordCount + elsesWordCount)} букв/слово
-    ваша:               ${myWordsLengths / myWordCount} букв/слово
-    у собеседника(-ов): ${elsesWordsLengths / elsesWordCount} букв/слово
-
-Уникальных слов:      ${Object.keys(wordsStat).length}
+Уникальных эмоджи:      ${Object.keys(wordsStat).length}
     ваших:            ${Object.keys(myWordsStat).length}
     собеседника(-ов): ${Object.keys(elsesWordsStat).length}
 `)
@@ -46,29 +39,29 @@ const     iSayMore = new Set([...myPopTopSet].filter(x => !elsesPopTopSet.has(x)
 const elseSaysMore = new Set([...elsesPopTopSet].filter(x => !myPopTopSet.has(x)))
 
 console.log(`
-Слова, которые часто говорите вы, а собеседник(и) нет:
+Эмоджи, которые часто используете вы, а собеседник(и) нет:
 ${[...iSayMore].join(', ')}
 
-Слова, которые часто говорит(-ят) собеседник(и), а вы нет:
+Эмоджи, которые часто использует(-ют) собеседник(и), а вы нет:
 ${[...elseSaysMore].join(', ')}
 `)
 
 console.log(`
-Топ ${topSize} наиболее частых слов:
+Топ ${topSize} наиболее частых эмоджи:
 ${
     arrayifyRating(wordsStat)
         .slice(0, topSize)
         .map( ({str, count}, i) => `${i + 1}. ${str} — ${count} раз` ).join('\n')
 }
 
-Топ ${topSize} ваших слов:
+Топ ${topSize} ваших эмоджи:
 ${
     arrayifyRating(myWordsStat)
         .slice(0, topSize)
         .map( ({str, count}, i) => `${i + 1}. ${str} — ${count} раз` ).join('\n')
 }
 
-Топ ${topSize} слов собеседника(-ов):
+Топ ${topSize} эмоджи собеседника(-ов):
 ${
     arrayifyRating(elsesWordsStat)
         .slice(0, topSize)

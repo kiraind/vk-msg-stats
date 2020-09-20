@@ -57,6 +57,9 @@ npm run word-frequency "Вы"
 # сравнение словарных запасов в диалоге
 npm run vocab-compare "Someone Else"
 
+# сравнение использования эмоджи в диалоге
+npm run emoji-compare "Someone Else"
+
 # анализ количества сообщений по часам суток
 npm run time-analyze "Someone Else"
 ```
