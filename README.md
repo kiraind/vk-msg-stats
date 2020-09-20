@@ -28,6 +28,8 @@ npm run find-message "привет"
 npm run top-your-messages
 # топ ваших слов
 npm run top-your-words
+# топ использованных вами эмоджи
+npm run top-your-emojis
 
 # статистика количества сообщений в диалоге с кем-то по неделям
 npm run weekly-words "Someone Else"
