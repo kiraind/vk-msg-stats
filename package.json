@@ -8,7 +8,6 @@
         "parse": "node src/parse.js",
         "find-message": "node src/metrics/find-message.js",
         "top-your-messages": "node src/metrics/top-your-messages.js",
-        "top-your-words": "node src/metrics/top-your-words.js",
         "top-your-emojis": "node src/metrics/top-your-emojis.js",
         "weekly-words": "node src/metrics/weekly-words.js",
         "word-frequency": "node src/metrics/word-frequency.js",
