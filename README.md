@@ -26,6 +26,7 @@ npm run find-message "привет"
 
 # топ ваших сообщений
 npm run top-your-messages
+
 # топ использованных вами эмоджи
 npm run top-your-emojis
 

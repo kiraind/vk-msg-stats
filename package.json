@@ -28,8 +28,7 @@
         "emoji-regex": "^9.0.0",
         "he": "^1.2.0",
         "iconv-lite": "^0.5.1",
-        "node-html-parser": "^1.2.14",
-        "unescape": "^1.0.1"
+        "node-html-parser": "^1.2.14"
     },
     "bugs": {
         "url": "https://github.com/kiraind/vk-msg-stats/issues"
