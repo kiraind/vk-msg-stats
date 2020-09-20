@@ -26,6 +26,8 @@ npm run find-message "привет"
 
 # топ ваших сообщений
 npm run top-your-messages
+# топ ваших слов
+npm run top-your-words
 
 # статистика количества сообщений в диалоге с кем-то по неделям
 npm run weekly-words "Someone Else"
