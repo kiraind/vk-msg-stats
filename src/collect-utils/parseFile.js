@@ -1,6 +1,5 @@
 const fs = require('fs')
 const iconv = require('iconv-lite')
-const unescape = require('unescape')
 const he = require('he')
 
 const {
@@ -65,11 +64,7 @@ function parseFile(path) {
 
         return {
             ...parseHeader(header),
-            text: unescape(messageText, 'all')
-                .replace(
-                    /&#\d+;/,
-                    mtch => String.fromCodePoint( mtch.slice(2, -1) )
-                ),
+            text: messageText,
         }
     })
 
