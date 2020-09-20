@@ -62,7 +62,7 @@ function parseFile(path) {
         return {
             ...parseHeader(header),
             text: unescape(messageText, 'all')
-                .replace(
+                .replaceAll(
                     /&#\d+;/,
                     mtch => String.fromCodePoint( mtch.slice(2, -1) )
                 ),

@@ -57,7 +57,7 @@ ${messagePart.map(
     }: ${'#'.repeat( Math.round(signPerMessagePart * part) )} — ${messageStats[i]}`
 ).join('\n')}
 
-Статистика по слова (час суток/слова):
+Статистика по словам (час суток/слова):
 ${wordsPart.map(
     (part, i) => `${
         i.toString().padStart(2, 0)
