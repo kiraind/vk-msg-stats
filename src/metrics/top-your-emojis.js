@@ -4,4 +4,4 @@ const makeTopList = require('../utils/makeYourTopList.js')
 
 console.log("Топ использованных вами эмоджи:")
 
-console.log(makeTopList(extractEmoji));
+console.log(makeTopList(extractEmoji))

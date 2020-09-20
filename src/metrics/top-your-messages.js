@@ -5,4 +5,4 @@ console.log("Топ ваших сообщений:")
 
 console.log(makeTopList(
     message => [message.toLowerCase()]
-));
+))
