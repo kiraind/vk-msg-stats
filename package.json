@@ -24,6 +24,7 @@
     "author": "kiraind",
     "license": "MIT",
     "dependencies": {
+        "he": "^1.2.0",
         "iconv-lite": "^0.5.1",
         "node-html-parser": "^1.2.14",
         "unescape": "^1.0.1"
