@@ -61,6 +61,8 @@ function parseFile(path) {
                 messageTexts.join('\n')
                 : ""
         )
+        // replace non-emoji red heart to emoji
+        .replace(/❤/g, "❤️")
 
         return {
             ...parseHeader(header),
